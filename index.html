@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--estilos bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Tipo letra con sus respectivo tamaños que pudiera usar-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="css/fontello.css">
+    <!--Mis estilos Css-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Portafolio - Elio Alfonzo - Amante de la tecnologia</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <!--Barra Logo + Menu -->
+            <!--align-item-strech:para que ocupe todo el alto de la barra| justify-content-betwen: paraq uno a ladere y otro a l aizquier-->
+            <div class="row nav rounded-top align-items-stretch justify-content-between">
+                <!--bordes redondos, los elementos ocupen espacio completo, logotipo a la izquier y icono a la dere-->
+                <!--Logotipo-->
+                <!--de un tamaño mediano en adelante sea 12 (col-md-12) (col-lg) en un espacio largo en adelante q se ajuste con lo otros tamñaos auto-->
+
+                <!--d-flex: qsea un contenedor padre cn flexbox| align-items-center:centramos vertical| justify-content-center:centrar horizontal-->
+                <!--justify-content-lg-start-->
+
+                <div class="col-md-12 col-lg logo d-flex align-items-center justify-content-center justify-content-lg-start">
+                    <h2>Elio Alfonzo</h2>
+                    <span class="icono icon-dot"></span>
+                    <!--icono-->
+                    <p>Desarrollador web</p>
+                </div>
+                <!--Los item dela barra de navegacion-->
+
+                <!--d-flex: le decimos que queremos trabajar con flexbox| flex-wrap:quiero q quepan en el contenedor | flex-sm-nowrap: no quepan-->
+                <nav class="col-md-12 col-lg-auto menu d-flex align-items-stretch flex-wrap flex-sm-nowrap">
+                    <!--Menu-Portafolio-->
+                    <a href="#" class="c-1 d-flex align-items-center">
+                        <div class="d-flex flex-column text-center">
+                            <span>Portafolio</span>
+                            <i class="icono icon-briefcase"></i>
+                        </div>
+                    </a>
+                    <!--Menu-Acerca de-->
+                    <a href="#" class="c-2 d-flex align-items-center">
+                        <div class="d-flex flex-column text-center">
+                            <span>Acerca de</span>
+                            <i class="icono icon-user"></i>
+                        </div>
+                    </a>
+                    <!--Menu-Contacto-->
+                    <a href="#" class="c-3 d-flex align-items-center">
+                        <div class="d-flex flex-column text-center">
+                            <span>Contacto</span>
+                            <i class="icono icon-mail"></i>
+                        </div>
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <!--Slider-->
+            <!--slider es para yo manejarlo desde css-->
+            <div class="row slider">
+                <!--para yo modificarlo y ponerlo al 100% del ancho-->
+                <div class="col">
+                    <!--contenedor del slider (slider bootstrap)-->
+                    <div class="carousel slide" id="slider" data-ride="carousel">
+                        <!--Hacemos los Indicadores | clase propia de bootstrap-->
+                        <ol class="carousel-indicators">
+                            <!--hacia donde queremos que vaya-->
+                            <li data-target="#slider" data-slide-to="0" class="active"></li>
+                            <li data-target="#slider" data-slide-to="1"></li>
+                            <li data-target="#slider" data-slide-to="2"></li>
+                        </ol>
+                        <!--El slide y sus imagenes-->
+                        <div class="carousel-inner">
+                            <!--Las imagines de cada item-->
+                            <div class="carousel-item active">
+                                <img src="img/carousel1.jpg" alt="Slide #1" class="d-block img-fluid">
+                                <!--img-fluid abarque el 100%-->
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carousel2.jpg" alt="Slide #2" class="d-block img-fluid">
+                                <!--img-fluid abarque el 100%-->
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="img/carousel3.jpg" alt="Slide #3" class="d-block img-fluid">
+                                <!--img-fluid abarque el 100%-->
+                            </div>
+                        </div>
+
+                        <!--El Signo de Anterior-->
+                        <a href="#silder" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                            <!--Para los dispositivos dode no se pueda mostrar-->
+                        </a>
+
+                        <!--El Signo de Siguiente-->
+                        <a href="#slider" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                            <!--Para los dispositivos dode no se pueda mostrar-->
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!--Portafolio-->
+            <div class="row portafolio">
+                <div class="col">
+                    <h2 class="titulo">Portafolio</h2>
+                    <!--justify-content-center si me sobra alguna imagen me la centre-->
+                    <div class="row galeria justify-content-center">
+
+                        <!--Primera Imagen-->
+                        <!--col-lg-4 para dispo grandez columnas de 4. los demas tamaños de 6-->
+                        <div class="contenedor-imagen col-6 col-lg-4">
+                            <!--cuando el usuario de click en la img haga el efecto modal-->
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <!--img-fluid para q abarque el 100% | imagen para agregarle estilos css-->
+                                <img src="img/img-1.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Segunda Imagen-->
+                        <!--en tamaños largos sea de 8, y en tamaño pequeños sea de 12 -->
+                        <div class="contenedor-imagen col-12 col-lg-8">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/bg.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Tercera Imagen-->
+                        <div class="contenedor-imagen col-12 col-lg-8">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/img-3.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Cuarta Imagen-->
+                        <div class="contenedor-imagen col-6 col-lg-4">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/img-4.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Quinta Imagen-->
+                        <div class="contenedor-imagen col-6 col-lg-4">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/img-5.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Sexta Imagen-->
+                        <div class="contenedor-imagen col-6 col-lg-4">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/img-6.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+
+                        <!--Sexta Imagen-->
+                        <div class="contenedor-imagen col-6 col-lg-4">
+                            <a href="#" data-toggle="modal" data-target="#modal">
+                                <img src="img/img-7.jpg" class="img-fluid imagen" alt="">
+                            </a>
+                        </div>
+                        <!--la pantalla se pone ocuracuando le damos click a los enlace con id=modal-->
+                        <div class="modal fade" id="modal">
+                            <div class="modal-dialog d-flex justify-content-center align-items-center">
+                                <!--flexible y lo centre hori y verti-->
+                                <div class="modal-content">
+                                    <!--Clase bootstrap-->
+                                    <img src="" id="imagen-modal" alt="">
+                                    <!--identificamos este espacio donde mostrar la imagen, llamado imagen-modal-->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Acerca de-->
+            <!--Foto y Nombre-->
+            <!--lo centre todo de forma vertical-->
+            <div class="row acerca-de align-items-center">
+
+                <!--largo y extra largo 4, y tamaños para abajo va ser de 12-->
+                <div class="col-12 col-lg-4 foto">
+                    
+                        <img src="img/foto.jpg" class="rounded-circle img-fluid" alt="">
+                        <p class="nombre">Elio Alfonzo</p>
+                    
+                </div>
+
+                <!--Las Barras-->
+                <!--largo y extra largo 8, y tamaños para abajo va ser de 12-->
+                <div class="col-12 col-lg-8 info">
+                    <h2 class="titulo">Acerca de</h2>
+                    <p class="resumen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repellat vero possimus earum atque! Recusandae
+                        eligendi magni earum fugiat aspernatur, impedit, totam id odio possimus quod commodi vero eum blanditiis?
+                    </p>
+
+                    <!--Barra de Conocimiento de diseño web-->
+                    <p class="label">HTML</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+
+                    <p class="label">CSS</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                    </div>
+
+                    <p class="label">Javascript</p>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%;">60%</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Seccion Contacto-->
+            <divc class="row contacto justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <h2 class="titulo">Contacto</h2>
+                    <form action="" class="formulario">
+                        <div class="form-group row">
+                            <!--Nombre-->
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="" id="" placeholder="Escribe tu Nombre">
+                            </div>
+                            <!--Email-->
+                            <div class="col-12 col-md-6 ">
+                                <input type="email" name="" id="" placeholder="Ingresa tu email">
+                            </div>
+                        </div>
+                        <textarea name="" id="" placeholder="Correo"></textarea>
+                        <div class="form-group d-flex justify-content-center">
+                            <input type="submit" value="Enviar" class="boton">
+                        </div>
+                    </form>
+                </div>
+        </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <!--Redes Sociales-->
+            <div class="row redes-sociales justify-content-center">
+                <div class="col-auto">
+                    <a href="#" class="icono icon-twitter twitter"></a>
+                    <a href="#" class="icono icon-facebook facebook"></a>
+                    <a href="#" class="icono icon-instagram instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Jquery-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--Js Bootstrap-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--scripts-->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
